@@ -168,6 +168,24 @@ public class GameOfLife
         Grid<Actor> grid = world.getGrid();
         
         // insert magic here...
+        int col = getNumCols();
+        int row = getNumRows();
+        for (int aliveColumn = 1; aliveColumn == col; aliveColumn++)
+        {
+            for(int aliveRow = 1; aliveRow == row; aliveRow++)
+            {
+                int aliveCell = game.getActor(aliveColumn, aliveRow);
+                if (aliveCell != null)
+                {
+                    Actor neighbor = game.getActor(aliveColumn, aliveRow);
+                    int aliveNeighbor = game.getActor(aliveColumn, aliveRow);
+                    if(aliveNeighbor == 2 || 3)
+                    {
+                        
+                    }
+                }
+            }
+        }
         
     }
     

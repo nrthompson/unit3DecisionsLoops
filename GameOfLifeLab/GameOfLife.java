@@ -170,16 +170,16 @@ public class GameOfLife
         // insert magic here...
         int col = getNumCols();
         int row = getNumRows();
-        for (int aliveColumn = 1; aliveColumn == col; aliveColumn++)
+        for (int aliveColumn = 0; aliveColumn < col; aliveColumn++)
         {
-            for(int aliveRow = 1; aliveRow == row; aliveRow++)
+            for(int aliveRow = 0; aliveRow < row; aliveRow++)
             {
-                int aliveCell = game.getActor(aliveColumn, aliveRow);
+                int aliveCell = this.getActor(aliveColumn, aliveRow);
                 if (aliveCell != null)
                 {
-                    Actor neighbor = game.getActor(aliveColumn, aliveRow);
-                    int aliveNeighbor = game.getActor(aliveColumn, aliveRow);
-                    if(aliveNeighbor == 2 || 3)
+                    Actor neighbor = this.getActor(aliveColumn, aliveRow);
+                    int Actor = this.getActor(aliveColumn, aliveRow);
+                    if(Actor == 2 || 3)
                     {
                         
                     }

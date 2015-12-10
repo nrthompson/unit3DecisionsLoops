@@ -165,7 +165,7 @@ public class GameOfLife
          */
         
         // create the grid, of the specified size, that contains Actors
-        Grid<Actor> grid = world.getGrid();
+        Grid<Actor> newgrid = world.getGrid();
         
         // insert magic here...
         int col = getNumCols();
@@ -174,15 +174,10 @@ public class GameOfLife
         {
             for(int aliveRow = 0; aliveRow < row; aliveRow++)
             {
-                int aliveCell = this.getActor(aliveColumn, aliveRow);
+                Actor aliveCell = this.getActor(aliveColumn, aliveRow);
                 if (aliveCell != null)
                 {
-                    Actor neighbor = this.getActor(aliveColumn, aliveRow);
-                    int Actor = this.getActor(aliveColumn, aliveRow);
-                    if(Actor == 2 || 3)
-                    {
-                        
-                    }
+                    
                 }
             }
         }

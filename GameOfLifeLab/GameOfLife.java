@@ -179,7 +179,10 @@ public class GameOfLife
                 if (aliveCell != null)
                 {
                    Location cellLoc = new Location(aliveRow, aliveColumn);
-                   grid.getNeighbors(cellLoc);
+                   ArrayList<Actor> neighbors = grid.getNeighbors(cellLoc);
+                   int neighborNum = neighbors.size();
+                {
+                if (aliveCell 2 || 3)
                 }
             }
         }

@@ -165,11 +165,12 @@ public class GameOfLife
          */
         
         // create the grid, of the specified size, that contains Actors
-        Grid<Actor> newgrid = world.getGrid();
+        Grid<Actor> grid = world.getGrid();
         
         // insert magic here...
         int col = getNumCols();
         int row = getNumRows();
+        BoundedGrid<Actor> grid2 = new BoundedGrid<Actor>(ROWS, COLS)
         for (int aliveColumn = 0; aliveColumn < col; aliveColumn++)
         {
             for(int aliveRow = 0; aliveRow < row; aliveRow++)
@@ -177,7 +178,8 @@ public class GameOfLife
                 Actor aliveCell = this.getActor(aliveColumn, aliveRow);
                 if (aliveCell != null)
                 {
-                    
+                   Location cellLoc = new Location(aliveRow, aliveColumn);
+                   grid.getNeighbors(cellLoc);
                 }
             }
         }

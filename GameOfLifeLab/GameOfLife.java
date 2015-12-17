@@ -183,6 +183,14 @@ public class GameOfLife
                    int neighborNum = neighbors.size();
                 {
                 if (aliveCell 2 || 3)
+                {
+                    aliveCell = true;
+                }
+                
+                }
+                else
+                {
+                    aliveCell = false;
                 }
             }
         }
